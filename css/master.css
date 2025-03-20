@@ -1,3 +1,11 @@
-.p{
-    color: black;
+#test {
+    display: flex;
+    max-width: 600px;
+}
+@media(max-width: 768px) {
+    #test {
+        display: flex;
+        max-width: 600px;
+        color: white;
+    }
 }
