@@ -2,10 +2,55 @@
     display: flex;
     max-width: 600px;
 }
+#table {
+    display: flex;
+    max-width: 300px;
+    color: white;
+    position: fixed;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: orange;
+
+}
+.row{
+    display:flex;
+    flex-direction: column;
+}
 @media(max-width: 768px) {
-    #test {
+    #table {
         display: flex;
         max-width: 600px;
         color: white;
+        position: fixed;
+        flex-direction: column;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: white;
+
     }
+    .menu {
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background-color: orange;
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 150px;
+        height: 100%;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      }
+  
+      .menu.show {
+        display: block;
+      }
+  
+      .menu button {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+      }
 }
