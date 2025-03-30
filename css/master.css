@@ -4,15 +4,14 @@
 }
 #table {
     display: flex;
-    max-width: 300px;
-    color: white;
+    max-width: 500px;
     position: fixed;
     flex-direction: column;
     left: 0;
     top: 0;
     height: 100%;
+    width: 300px;
     background-color: orange;
-
 }
 .row{
     display:flex;
@@ -24,6 +23,55 @@
     flex-direction: column;
     /* align-items: center; */
 }
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    font-size: 30px;
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  
+.back {
+    background-color: antiquewhite;
+    padding: 10px;
+}
+/* a {
+    text-decoration: none;
+    color: (white);
+} */
+/* .menu a {
+    text-decoration: none;
+    color: black;
+    background-color: rgba(255,255,255,0,25);
+    transition: background 0.3s ease;
+} */
+.menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;                /* Makes it responsive within the sidebar */
+    max-width: 100%;           /* Prevents overflow */
+    padding: 16px 12px;
+    background-color: antiquewhite;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 30px;
+    box-sizing: border-box;    /* Includes padding within the width */
+    word-break: break-word;    /* Just in case a word is very long */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* optional: shows "..." if text is too long */
+
+  }
+  
+  
+  
 @media(max-width: 768px) {
     #table {
         display: flex;
@@ -45,18 +93,24 @@
         background-color: orange;
         border: 1px solid #ccc;
         padding: 10px;
-        width: 150px;
+        width: 300px;
         height: 100%;
         box-shadow: 0 2px 6px rgba(0,0,0,0.15);
         transition: opacity 0.3s ease, transform 0.3s ease;
         opacity: 0;
         padding: 1rem;
+        margin-bottom: 30px;
       }
   
       /* .menu.show {
         display: block;
       } */
-  
+    /* .menu a {
+        text-decoration: none;
+        color: white;
+        background-color: rgba(255,255,255,0,25);
+        transition: background 0.3s ease;
+    } */
       .menu button {
         display: block;
         width: 100%;
