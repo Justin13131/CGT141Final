@@ -2,6 +2,47 @@
     display: flex;
     max-width: 600px;
 }
+
+#top-bar {
+    width: 100%;
+    background-color: #333;
+    /* dark background (you can change it) */
+    color: white;
+    /* text color */
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    /* make sure it sits above everything */
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#top-bar h1 {
+    margin: 0;
+    font-size: 28px;
+}
+#table button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    background-color: #eee;
+    border: 1px solid #999;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1100;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    margin-top: 20px;
+  }
+  
+
 #table {
     display: flex;
     max-width: 500px;
@@ -12,17 +53,22 @@
     height: 100%;
     width: 300px;
     background-color: orange;
+    margin-top: 50px;
 }
-.row{
-    display:flex;
+
+
+.row {
+    display: flex;
     flex-direction: column;
 }
+
 .menu.show {
     display: flex;
     opacity: 1;
     flex-direction: column;
     /* align-items: center; */
 }
+
 .menu {
     display: flex;
     flex-direction: column;
@@ -33,13 +79,17 @@
     max-width: 100%;
     padding: 1rem;
     box-sizing: border-box;
-  }
-  
-  
+    margin-top: 60px; /* ✅ push links down */
+}
+
+
+
 .back {
+    margin-top: 5%;
     background-color: antiquewhite;
     padding: 10px;
 }
+
 /* a {
     text-decoration: none;
     color: (white);
@@ -54,26 +104,153 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;                /* Makes it responsive within the sidebar */
-    max-width: 100%;           /* Prevents overflow */
+    width: 90%;
+    /* Makes it responsive within the sidebar */
+    max-width: 100%;
+    /* Prevents overflow */
     padding: 16px 12px;
     background-color: antiquewhite;
     color: black;
     text-decoration: none;
     border-radius: 10px;
     font-size: 30px;
-    box-sizing: border-box;    /* Includes padding within the width */
-    word-break: break-word;    /* Just in case a word is very long */
+    box-sizing: border-box;
+    /* Includes padding within the width */
+    word-break: break-word;
+    /* Just in case a word is very long */
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* optional: shows "..." if text is too long */
+    text-overflow: ellipsis;
+    /* optional: shows "..." if text is too long */
 
-  }
-  
-  
-  
+}
+
+#main-content {
+    margin-left: 300px;
+    padding: 100px 2rem 2rem 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    /* 🔥 ensure left alignment */
+}
+
+
+#intro-text {
+    font-size: 18px;
+    color: #333;
+    max-width: 600px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.test-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#test-link {
+    background-color: #444;
+    color: white;
+    padding: 12px 24px;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+#test-link:hover {
+    background-color: #666;
+}
+
+#taste-form {
+    background-color: #1e1e1e;
+    /* dark gray/blackish */
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* === LABELS === */
+#taste-form label {
+    font-size: 16px;
+    color: white;
+}
+
+/* === INPUTS, TEXTAREAS, SELECT === */
+#taste-form input,
+#taste-form textarea,
+#taste-form select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: white;
+    /* input background */
+    color: black;
+    /* user input color */
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* === SUBMIT BUTTON === */
+#taste-form button {
+    background-color: #444;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#taste-form button:hover {
+    background-color: #666;
+}
+
+
+
+
 @media(max-width: 768px) {
+    #main-content.menu-open {
+        margin-left: 300px;
+        /* Only applied when menu is open */
+    }
+
+    #main-content {
+        margin-left: 0px;
+        padding-top: 100px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        align-items: flex-start;
+        /* 🔥 ensure text and button align left */
+    }
+
+    .test-button-wrapper {
+        justify-content: center;
+        width: 100%;
+        /* Ensure the wrapper fills the width */
+    }
+
+    #test-link {
+        text-align: center;
+    }
+
+    #intro-text {
+        text-align: left;
+    }
+
+
     #table {
+        margin-top: 50px;
         display: flex;
         max-width: 600px;
         color: white;
@@ -81,10 +258,16 @@
         flex-direction: column;
         left: 0;
         top: 0;
+        width: 0;
         height: 100%;
         background-color: white;
 
     }
+    #table.open {
+        width: 300px;
+    }
+    
+
     .menu {
         display: none;
         position: absolute;
@@ -95,14 +278,14 @@
         padding: 10px;
         width: 300px;
         height: 100%;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
         transition: opacity 0.3s ease, transform 0.3s ease;
         opacity: 0;
         padding: 1rem;
         margin-bottom: 30px;
-      }
-  
-      /* .menu.show {
+    }
+
+    /* .menu.show {
         display: block;
       } */
     /* .menu a {
@@ -111,9 +294,30 @@
         background-color: rgba(255,255,255,0,25);
         transition: background 0.3s ease;
     } */
-      .menu button {
+    .menu button {
         display: block;
         width: 100%;
         margin: 5px 0;
+    }
+
+    #table button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 8px 12px;
+        background-color: #eee;
+        border: 1px solid #999;
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 1100;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        white-space: nowrap;
+        margin-top: 20px;
       }
+      
+
+
 }

@@ -1,40 +1,93 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-	<title>Final_Main_Page</title>	
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Final_Main_Page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/master.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
- 
-<div id="container">
-	<div id="header">
-	</div>
-    
-	<div id="content-table">
-		<div id="table">
-			<button onclick="toggleMenu()">☰ Menu</button>
 
-			<div id="menu" class="menu">
-				<button id="row" href="Medieval_Period.html">Medival</button>
-				<button id="row" href="Renaissance_Period.html">Renaissance</button>
-				<button id="row" href="Baroque_Period .html">Baroque</button>
-				<button id="row" href="Classical_Period.html">Classical</button>
-				<button id="row" href="Romantic_Period.html">Romantic</button>
-			</div>
-			<script>
-				function toggleMenu() {
-				  const menu = document.getElementById('menu');
-				  menu.classList.toggle('show');
-				}
-			  </script>
+	<div id="container">
+		<div id="header">
 		</div>
-	</div>	
-	
-	<div id="footer"></div>
 
-</div>
+		<div id="content-table">
+			<div id="table">
+				<button onclick="toggleMenu()">☰ Menu</button>
+
+				<div id="menu" class="menu">
+                        <div id="row"><a class="back" href="index.html">Main Page</a></div>
+						<div id="row"><a class="back" href="Medieval_Period.html">Medival</a></div>
+						<div id="row"><a class="back" href="Renaissance_Period.html">Renaissance</a></div>
+						<div id="row"><a class="back" href="Baroque_Period .html">Baroque</a></div>
+						<div id="row"><a class="back" href="Romantic_Period.html">Romantic</a></div>
+					
+				</div>
+				<script>
+					function toggleMenu() {
+					  if (window.innerWidth <= 768) { // Only toggle if screen is small
+						const menu = document.getElementById('menu');
+						const table = document.getElementById('table');
+						const main = document.getElementById('main-content');
+				  
+						menu.classList.toggle('show');
+						table.classList.toggle('open');
+						main.classList.toggle('menu-open');
+					  }
+					}
+				  </script>
+				  
+				  
+				  
+			</div>
+		</div>
+		<div id="top-bar">
+			<h1>Music Taste Test</h1>
+		</div>
+		<div id="main-content">
+			<p id="intro-text">
+				<strong>Introduction:</strong><br>
+				This page allows users to take a quick test to find a classical music era that fits their taste.
+			</p>
+			<form id="taste-form" action="https://formspree.io/f/mdkellrg" method="POST">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required />
+			  
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required />
+			  
+				<label for="age">Age:</label>
+				<input type="number" id="age" name="age" min="1" max="120" required />
+			  
+				<label for="era">Favorite Era:</label>
+				<select id="era" name="era" required>
+				  <option value="">-- Select --</option>
+				  <option value="Medieval">Medieval</option>
+				  <option value="Renaissance">Renaissance</option>
+				  <option value="Baroque">Baroque</option>
+				  <option value="Classical">Classical</option>
+				  <option value="Romantic">Romantic</option>
+				</select>
+			  
+				<label for="comments">Why do you like this era?</label>
+				<textarea id="comments" name="comments" rows="4" required></textarea>
+	
+				<input type="hidden" name="_redirect" value="https://justin13131.github.io/CGT141Final/thank-you.html" />
+				<button type="submit">Submit</button>
+			  </form>
+		</div>
+		
+		  
+		  
+
+		<div id="footer"></div>
+
+	</div>
 
 </body>
+
 </html>
