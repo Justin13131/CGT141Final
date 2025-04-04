@@ -49,11 +49,28 @@
 		<div id="top-bar">
 			<h1>Music Taste Test</h1>
 		</div>
+		<div id="video-round">
+			<h2>Which music do you prefer?</h2>
+
+			<div class="video-battle">
+				<div class="video-option">
+					<iframe id="video1" width="300" height="170" src="" frameborder="0" allowfullscreen></iframe>
+					<button onclick="selectVideo(0)">Choose This</button>
+				</div>
+
+				<div class="video-option">
+					<iframe id="video2" width="300" height="170" src="" frameborder="0" allowfullscreen></iframe>
+					<button onclick="selectVideo(1)">Choose This</button>
+				</div>
+			</div>
+
+			<p id="final-result"></p>
+		</div>
+
+
+
+
 		<div id="main-content">
-			<p id="intro-text">
-				<strong>Introduction:</strong><br>
-				This page allows users to take a quick test to find a classical music era that fits their taste.
-			</p>
 			<form id="taste-form" action="https://formspree.io/f/mdkellrg" method="POST">
 				<label for="name">Name:</label>
 				<input type="text" id="name" name="name" required />
@@ -88,6 +105,95 @@
 		<div id="footer"></div>
 
 	</div>
+	<script>
+		const videos = [
+			"pdsyNwUoON0", //Baroque
+			"IUZEtVbJT5c", //Baroque
+			"czBSj6_6rkE", //Classical
+			"7eOaIiHB58U", //Classical
+			"1SlL-hBeSA4", //Medival
+			"lOVsY1rxJB8", // Medival
+			"kyGlFisv7Ng", // Renaissance
+			"eqt005j1dB0", // Renaissance
+			"p29JUpsOSTE", // Romantic
+			"CShopT9QUzw"  // Romantic
+		];
+
+		let currentIndex = 2; // because the first 2 videos are already displayed
+		let currentChampion = videos[0];
+		let challenger = videos[1];
+
+		function loadVideos() {
+			// Load the videos into iframes
+			document.getElementById("video1").src = `https://www.youtube.com/embed/${currentChampion}`;
+			document.getElementById("video2").src = `https://www.youtube.com/embed/${challenger}`;
+		}
+
+		function selectVideo(choice) {
+			if (choice === 0) {
+				// User chose currentChampion, challenger is replaced
+				if (currentIndex < videos.length) {
+					challenger = videos[currentIndex++];
+					loadVideos();
+				} else {
+					endTest(currentChampion);
+				}
+			} else {
+				// User chose challenger, it becomes new champion
+				currentChampion = challenger;
+				if (currentIndex < videos.length) {
+					challenger = videos[currentIndex++];
+					loadVideos();
+				} else {
+					endTest(currentChampion);
+				}
+			}
+		}
+
+		function endTest(finalChoice) {
+			// Map video IDs to eras
+			const videoToEra = {
+				"pdsyNwUoON0": "Baroque",
+				"IUZEtVbJT5c": "Baroque",
+				"czBSj6_6rkE": "Classical",
+				"7eOaIiHB58U": "Classical",
+				"1SlL-hBeSA4": "Medieval",
+				"lOVsY1rxJB8": "Medieval",
+				"kyGlFisv7Ng": "Renaissance",
+				"eqt005j1dB0": "Renaissance",
+				"p29JUpsOSTE": "Romantic",
+				"CShopT9QUzw": "Romantic"
+			};
+
+			// Map eras to your actual page URLs
+			const eraToPage = {
+				"Baroque": "Baroque_Period.html",
+				"Classical": "Classical_Period.html",
+				"Medieval": "Medival_Period.html",
+				"Renaissance": "Renaissance_Period.html",
+				"Romantic": "Romantic_Period.html"
+			};
+
+			const era = videoToEra[finalChoice];
+			const page = eraToPage[era];
+
+			// Redirect user
+			if (page) {
+				window.location.href = page;
+			} else {
+				document.querySelector(".video-battle").style.display = "none";
+				document.getElementById("final-result").innerHTML =
+						`🎉 Your favorite is: <a href=${page}" target="_blank">Watch here</a><br><br>⚠️ Couldn't find matching page.`;
+			}
+		}
+
+
+		// Start the first load
+		loadVideos();
+	</script>
+
+
+
 
 </body>
 
