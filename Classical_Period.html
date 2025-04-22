@@ -1,5 +1,5 @@
 <!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -11,82 +11,128 @@
 
 <body>
 
-	<div id="container">
-		<div id="header">
-		</div>
+<div id="container">
+	<div id="header">
+	</div>
 
-		<div id="content-table">
-			<div id="table">
-				<button onclick="toggleMenu()">☰ Menu</button>
+	<div id="content-table">
+		<div id="table">
+			<button onclick="toggleMenu()">☰ Menu</button>
 
-				<div id="menu" class="menu">
-                        <div id="row"><a class="back" href="index.html">Main Page</a></div>
-						<div id="row"><a class="back" href="Medieval_Period.html">Medival</a></div>
-						<div id="row"><a class="back" href="Renaissance_Period.html">Renaissance</a></div>
-						<div id="row"><a class="back" href="Baroque_Period.html">Baroque</a></div>
-						<div id="row"><a class="back" href="Romantic_Period.html">Romantic</a></div>
-					
-				</div>
-				<script>
-					function toggleMenu() {
-					  if (window.innerWidth <= 768) { // Only toggle if screen is small
+			<div id="menu" class="menu">
+				<div id="row"><a class="back" href="index.html">Main Page</a></div>
+				<div id="row"><a class="back" href="Medieval_Period.html">Medieval</a></div>
+				<div id="row"><a class="back" href="Renaissance_Period.html">Renaissance</a></div>
+				<div id="row"><a class="back" href="Classical_Period.html">Classical</a></div>
+				<div id="row"><a class="back" href="Romantic_Period.html">Romantic</a></div>
+
+			</div>
+			<script>
+				function toggleMenu() {
+					if (window.innerWidth <= 768) { // Only toggle if screen is small
 						const menu = document.getElementById('menu');
 						const table = document.getElementById('table');
 						const main = document.getElementById('main-content');
-				  
+
 						menu.classList.toggle('show');
 						table.classList.toggle('open');
 						main.classList.toggle('menu-open');
-					  }
 					}
-				  </script>
-				  
-				  
-				  
-			</div>
+				}
+			</script>
+
+
+
 		</div>
+	</div>
+
+
+	<div id="main-content">
 		<div id="top-bar">
 			<h1>Music Taste Test</h1>
 		</div>
-		<div id="main-content">
-			<p id="intro-text">
-				<strong>Introduction:</strong><br>
-				This page allows users to take a quick test to find a classical music era that fits their taste.
-			</p>
-			<form id="taste-form" action="https://formspree.io/f/mdkellrg" method="POST">
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" required />
-			  
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required />
-			  
-				<label for="age">Age:</label>
-				<input type="number" id="age" name="age" min="1" max="120" required />
-			  
-				<label for="era">Favorite Era:</label>
-				<select id="era" name="era" required>
-				  <option value="">-- Select --</option>
-				  <option value="Medieval">Medieval</option>
-				  <option value="Renaissance">Renaissance</option>
-				  <option value="Baroque">Baroque</option>
-				  <option value="Classical">Classical</option>
-				  <option value="Romantic">Romantic</option>
-				</select>
-			  
-				<label for="comments">Why do you like this era?</label>
-				<textarea id="comments" name="comments" rows="4" required></textarea>
-	
-				<input type="hidden" name="_redirect" value="https://justin13131.github.io/CGT141Final/thank-you.html" />
-				<button type="submit">Submit</button>
-			  </form>
+		<h1>Classical</h1>
+		<div class="video-section">
+			<h2>Symphony No. 40 in G Minor – Wolfgang Amadeus Mozart</h2>
+			<div class="video-info">
+				<div class="video-embed">
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/RKvd4tMkFHc"
+							title="Symphony No. 40 in G Minor – Wolfgang Amadeus Mozart" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="video-description">
+					<p>Composed in 1788, this is one of only two symphonies Mozart wrote in a minor key.
+						It’s renowned for its emotional intensity and dramatic urgency, which was rare for symphonic music at the time.
+						The first movement’s stormy character reflects a shift from the light elegance of early Classical style toward more expressive Romanticism.
+						Mozart never heard this performed publicly in his lifetime.
+					</p>
+				</div>
+			</div>
 		</div>
-		
-		  
-		  
+		<div class="video-section">
+			<h2>Symphony No. 5 in C Minor – Ludwig van Beethoven</h2>
+			<div class="video-info">
+				<div class="video-embed">
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/rRgXUFnfKIY"
+							title="Beethoven - Symphony No. 5 in C minor (complete)" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="video-description">
+					<p>Completed in 1808, Beethoven’s Fifth Symphony is arguably the most famous symphony ever written.
+						The iconic four-note motif — "da-da-da-DUM" — is recognized worldwide. It reflects Beethoven's struggle with fate and impending deafness.
+						The symphony revolutionized Classical form by introducing deeper emotion, thematic development, and a dramatic journey from darkness to triumph.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="video-section">
+			<h2>Franz Joseph Haydn – Symphony No. 94 “Surprise” (2nd Movement)</h2>
+			<div class="video-info">
+				<div class="video-embed">
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/lLjwkamp3lI"
+							title="Haydn - Symphony No. 94 &quot;Surprise&quot; - 2nd Movement" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="video-description">
+					<p>Nicknamed the “Surprise Symphony”, Haydn composed this in 1791 during his first trip to London.
+						The second movement starts softly and then—BANG!—delivers a loud unexpected chord to jolt the audience awake.
+						Haydn, the “Father of the Symphony,” used humor and wit to make Classical music more engaging, and this is his most famous example.
+					</p>
+				</div>
+			</div>
+		</div>
 
-		<div id="footer"></div>
+		<form id="taste-form" action="https://formspree.io/f/mdkellrg" method="POST">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required />
 
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required />
+
+			<label for="age">Age:</label>
+			<input type="number" id="age" name="age" min="1" max="120" required />
+
+			<label for="era">Favorite Era:</label>
+			<select id="era" name="era" required>
+				<option value="">-- Select --</option>
+				<option value="Medieval">Medieval</option>
+				<option value="Renaissance">Renaissance</option>
+				<option value="Baroque">Baroque</option>
+				<option value="Classical">Classical</option>
+				<option value="Romantic">Romantic</option>
+			</select>
+
+			<label for="comments">Why do you like this era?</label>
+			<textarea id="comments" name="comments" rows="4" required></textarea>
+
+			<input type="hidden" name="_redirect" value="https://justin13131.github.io/CGT141Final/thank-you.html" />
+			<button type="submit">Submit</button>
+		</form>
 	</div>
+
+
+
+
+	<div id="footer"></div>
+
+</div>
 
 </body>
 

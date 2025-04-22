@@ -1,5 +1,5 @@
 <!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -11,83 +11,128 @@
 
 <body>
 
-	<div id="container">
-		<div id="header">
-		</div>
+<div id="container">
+	<div id="header">
+	</div>
 
-		<div id="content-table">
-			<div id="table">
-				<button onclick="toggleMenu()">☰ Menu</button>
+	<div id="content-table">
+		<div id="table">
+			<button onclick="toggleMenu()">☰ Menu</button>
 
-				<div id="menu" class="menu">
-                        <div id="row"><a class="back" href="index.html">Main Page</a></div>
-						<div id="row"><a class="back" href="Medieval_Period.html">Medival</a></div>
-						<div id="row"><a class="back" href="Renaissance_Period.html">Renaissance</a></div>
-						<div id="row"><a class="back" href="Baroque_Period.html">Baroque</a></div>
-						<div id="row"><a class="back" href="Classical_Period.html">Classical</a></div>
-					
-				</div>
-				<script>
-					function toggleMenu() {
-					  if (window.innerWidth <= 768) { // Only toggle if screen is small
+			<div id="menu" class="menu">
+				<div id="row"><a class="back" href="index.html">Main Page</a></div>
+				<div id="row"><a class="back" href="Medieval_Period.html">Medieval</a></div>
+				<div id="row"><a class="back" href="Renaissance_Period.html">Renaissance</a></div>
+				<div id="row"><a class="back" href="Classical_Period.html">Classical</a></div>
+				<div id="row"><a class="back" href="Romantic_Period.html">Romantic</a></div>
+
+			</div>
+			<script>
+				function toggleMenu() {
+					if (window.innerWidth <= 768) { // Only toggle if screen is small
 						const menu = document.getElementById('menu');
 						const table = document.getElementById('table');
 						const main = document.getElementById('main-content');
-				  
+
 						menu.classList.toggle('show');
 						table.classList.toggle('open');
 						main.classList.toggle('menu-open');
-					  }
 					}
-				  </script>
-				  
-				  
-				  
-			</div>
+				}
+			</script>
+
+
+
 		</div>
+	</div>
+
+
+	<div id="main-content">
 		<div id="top-bar">
 			<h1>Music Taste Test</h1>
 		</div>
-		<div id="main-content">
-			<p id="intro-text">
-				<strong>Introduction:</strong><br>
-				This page allows users to take a quick test to find a classical music era that fits their taste.
-			</p>
-
-			<form id="taste-form" action="https://formspree.io/f/mdkellrg" method="POST">
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" required />
-			  
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required />
-			  
-				<label for="age">Age:</label>
-				<input type="number" id="age" name="age" min="1" max="120" required />
-			  
-				<label for="era">Favorite Era:</label>
-				<select id="era" name="era" required>
-				  <option value="">-- Select --</option>
-				  <option value="Medieval">Medieval</option>
-				  <option value="Renaissance">Renaissance</option>
-				  <option value="Baroque">Baroque</option>
-				  <option value="Classical">Classical</option>
-				  <option value="Romantic">Romantic</option>
-				</select>
-			  
-				<label for="comments">Why do you like this era?</label>
-				<textarea id="comments" name="comments" rows="4" required></textarea>
-	
-				<input type="hidden" name="_redirect" value="https://justin13131.github.io/CGT141Final/thank-you.html" />
-				<button type="submit">Submit</button>
-			  </form>
+		<h1>Romantic</h1>
+		<div class="video-section">
+			<h2>Nocturne Op. 9 No. 2 – Frédéric Chopin</h2>
+			<div class="video-info">
+				<div class="video-embed">
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/9E6b3swbnWg"
+							title="Chopin - Nocturne Op. 9 No. 2" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="video-description">
+					<p>"Composed between 1830 and 1832, this Nocturne is one of Chopin’s most beloved works.
+						It captures the Romantic era’s passion for emotional depth, with a lyrical melody and expressive rubato,
+						delivering a sense of longing and tenderness through solo piano."</p>
+				</div>
+			</div>
 		</div>
-		
-		  
-		  
 
-		<div id="footer"></div>
+		<div class="video-section">
+			<h2>Hungarian Dance No. 5 – Johannes Brahms</h2>
+			<div class="video-info">
+				<div class="video-embed">
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/3X9LvC9WkkQ"
+							title="Brahms - Hungarian Dance No. 5" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="video-description">
+					<p>"Published in 1869, Brahms’ Hungarian Dance No. 5 is infused with the fiery spirit of Romani folk music.
+						Its quick dynamic shifts, catchy rhythms, and bold contrasts made it an instant hit.
+						It represents how Romantic composers drew on folk roots to express national identity."</p>
+				</div>
+			</div>
+		</div>
 
+		<div class="video-section">
+			<h2>Symphonie Fantastique – March to the Scaffold – Hector Berlioz</h2>
+			<div class="video-info">
+				<div class="video-embed">
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/cao6WyF-61s"
+							title="Berlioz - Symphonie Fantastique, IV. March to the Scaffold" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="video-description">
+					<p>"Written in 1830, Berlioz's Symphonie Fantastique tells the story of an artist's opium-fueled dream.
+						The fourth movement, March to the Scaffold, depicts the protagonist’s execution.
+						It showcases dramatic storytelling through music — a hallmark of Romantic orchestration."</p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<form id="taste-form" action="https://formspree.io/f/mdkellrg" method="POST">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required />
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required />
+
+			<label for="age">Age:</label>
+			<input type="number" id="age" name="age" min="1" max="120" required />
+
+			<label for="era">Favorite Era:</label>
+			<select id="era" name="era" required>
+				<option value="">-- Select --</option>
+				<option value="Medieval">Medieval</option>
+				<option value="Renaissance">Renaissance</option>
+				<option value="Baroque">Baroque</option>
+				<option value="Classical">Classical</option>
+				<option value="Romantic">Romantic</option>
+			</select>
+
+			<label for="comments">Why do you like this era?</label>
+			<textarea id="comments" name="comments" rows="4" required></textarea>
+
+			<input type="hidden" name="_redirect" value="https://justin13131.github.io/CGT141Final/thank-you.html" />
+			<button type="submit">Submit</button>
+		</form>
 	</div>
+
+
+
+
+	<div id="footer"></div>
+
+</div>
 
 </body>
 

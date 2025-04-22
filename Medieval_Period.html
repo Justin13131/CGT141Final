@@ -1,5 +1,5 @@
 <!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -11,82 +11,126 @@
 
 <body>
 
-	<div id="container">
-		<div id="header">
-		</div>
+<div id="container">
+	<div id="header">
+	</div>
 
-		<div id="content-table">
-			<div id="table">
-				<button onclick="toggleMenu()">☰ Menu</button>
+	<div id="content-table">
+		<div id="table">
+			<button onclick="toggleMenu()">☰ Menu</button>
 
-				<div id="menu" class="menu">
-                        <div id="row"><a class="back" href="index.html">Main Page</a></div>
-						<div id="row"><a class="back" href="Renaissance_Period.html">Renaissance</a></div>
-						<div id="row"><a class="back" href="Baroque_Period.html">Baroque</a></div>
-						<div id="row"><a class="back" href="Classical_Period.html">Classical</a></div>
-						<div id="row"><a class="back" href="Romantic_Period.html">Romantic</a></div>
-					
-				</div>
-				<script>
-					function toggleMenu() {
-					  if (window.innerWidth <= 768) { // Only toggle if screen is small
+			<div id="menu" class="menu">
+				<div id="row"><a class="back" href="index.html">Main Page</a></div>
+				<div id="row"><a class="back" href="Baroque_Period.html">Baroque</a></div>
+				<div id="row"><a class="back" href="Renaissance_Period.html">Renaissance</a></div>
+				<div id="row"><a class="back" href="Classical_Period.html">Classical</a></div>
+				<div id="row"><a class="back" href="Romantic_Period.html">Romantic</a></div>
+
+			</div>
+			<script>
+				function toggleMenu() {
+					if (window.innerWidth <= 768) { // Only toggle if screen is small
 						const menu = document.getElementById('menu');
 						const table = document.getElementById('table');
 						const main = document.getElementById('main-content');
-				  
+
 						menu.classList.toggle('show');
 						table.classList.toggle('open');
 						main.classList.toggle('menu-open');
-					  }
 					}
-				  </script>
-				  
-				  
-				  
-			</div>
+				}
+			</script>
+
+
+
 		</div>
+	</div>
+
+
+	<div id="main-content">
 		<div id="top-bar">
 			<h1>Music Taste Test</h1>
 		</div>
-		<div id="main-content">
-			<p id="intro-text">
-				<strong>Introduction:</strong><br>
-				This page allows users to take a quick test to find a classical music era that fits their taste.
-			</p>
-			<form id="taste-form" action="https://formspree.io/f/mdkellrg" method="POST">
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" required />
-			  
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required />
-			  
-				<label for="age">Age:</label>
-				<input type="number" id="age" name="age" min="1" max="120" required />
-			  
-				<label for="era">Favorite Era:</label>
-				<select id="era" name="era" required>
-				  <option value="">-- Select --</option>
-				  <option value="Medieval">Medieval</option>
-				  <option value="Renaissance">Renaissance</option>
-				  <option value="Baroque">Baroque</option>
-				  <option value="Classical">Classical</option>
-				  <option value="Romantic">Romantic</option>
-				</select>
-			  
-				<label for="comments">Why do you like this era?</label>
-				<textarea id="comments" name="comments" rows="4" required></textarea>
-	
-				<input type="hidden" name="_redirect" value="https://justin13131.github.io/CGT141Final/thank-you.html" />
-				<button type="submit">Submit</button>
-			  </form>
+		<h1>Medieval</h1>
+		<div class="video-section">
+			<h2>“Ave Generosa” – Hildegard von Bingen</h2>
+			<div class="video-info">
+				<div class="video-embed">
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/27ol_QffDhE?si=5d9Gp94NaDWS2eCN"
+							title="Ave Generosa – Hildegard von Bingen | Sequentia" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="video-description">
+					<p>“Ave Generosa” is a tribute to the Virgin Mary, composed by Hildegard in the 12th century.
+						It features modal melodies and sacred mysticism, expressing divine femininity and religious devotion in Hildegard’s visionary voice.
+					</p>
+				</div>
+			</div>
 		</div>
-		
-		  
-		  
+		<div class="video-section">
+			<h2>“Sumer Is Icumen In” – Anonymous (13th Century)</h2>
+			<div class="video-info">
+				<div class="video-embed">
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/sMCA9nYnLWo"
+							title="Sumer is icumen in - Medieval English Round" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="video-description">
+					<p>This is the earliest known canon (round) in the English language, dated around 1260.
+						It celebrates the arrival of summer and showcases polyphonic innovation long before the Renaissance.
+						It’s playful, rustic, and reflective of Medieval secular song.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="video-section">
+			<h2>“Cantiga 166: Como poden per sas culpas” – Alfonso X, Cantigas de Santa Maria</h2>
+			<div class="video-info">
+				<div class="video-embed">
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/HYFtYIao-6w?si=YGsUAmBLei8Z4OZR"
+							title="Cantiga 166 - Como poden per sas culpas (Cantigas de Santa Maria)" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="video-description">
+					<p>Part of the Cantigas de Santa Maria, a 13th-century collection of songs praising the Virgin Mary,
+						compiled under King Alfonso X of Castile. These are some of the most extensive and beautifully preserved examples of Medieval monophonic music.
 
-		<div id="footer"></div>
+					</p>
+				</div>
+			</div>
+		</div>
 
+		<form id="taste-form" action="https://formspree.io/f/mdkellrg" method="POST">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required />
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required />
+
+			<label for="age">Age:</label>
+			<input type="number" id="age" name="age" min="1" max="120" required />
+
+			<label for="era">Favorite Era:</label>
+			<select id="era" name="era" required>
+				<option value="">-- Select --</option>
+				<option value="Medieval">Medieval</option>
+				<option value="Renaissance">Renaissance</option>
+				<option value="Baroque">Baroque</option>
+				<option value="Classical">Classical</option>
+				<option value="Romantic">Romantic</option>
+			</select>
+
+			<label for="comments">Why do you like this era?</label>
+			<textarea id="comments" name="comments" rows="4" required></textarea>
+
+			<input type="hidden" name="_redirect" value="https://justin13131.github.io/CGT141Final/thank-you.html" />
+			<button type="submit">Submit</button>
+		</form>
 	</div>
+
+
+
+
+	<div id="footer"></div>
+
+</div>
 
 </body>
 
